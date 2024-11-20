@@ -1,0 +1,116 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+  }
+  
+  .section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  #home {
+    background: linear-gradient(135deg, #c091f1, #e72eed);
+  }
+  #about {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+  #services {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+  }
+  #contact {
+    background: linear-gradient(135deg, #fa709a, #2a1c76);
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px); 
+    color: white;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ff6347;
+    text-shadow: 2px 2px 10px rgba(255, 99, 71, 0.8); 
+  }
+
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      display: none;
+      padding: 20px 0;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links a {
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+  
